@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kinematic Report — tv2_keypoints.csv</title>
+<style>
+  :root { --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --blue:#2563eb; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:32px 24px 64px; }
+  .topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; height:42px; padding:0 18px;
+          border-radius:12px; border:1px solid var(--blue); background:var(--blue); color:#fff;
+          font-weight:600; cursor:pointer; }
+  h1 { font-size:28px; margin:0; letter-spacing:-.02em; }
+  .sub { color:var(--muted); margin-top:4px; }
+  .banner { display:flex; align-items:center; gap:16px; padding:22px 26px; border-radius:18px;
+             color:#fff; margin:22px 0; }
+  .banner.good { background:#0f766e; }
+  .banner.bad  { background:#9f1239; }
+  .banner .tag { font-size:11px; text-transform:uppercase; letter-spacing:.12em; opacity:.8; }
+  .banner h2 { margin:2px 0 0; font-size:22px; }
+  .banner .sev { margin-left:auto; text-align:right; font-size:13px; opacity:.9; }
+  .grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin:20px 0; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; }
+  .card-label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+  .card-value { font-size:22px; font-weight:700; margin-top:6px; }
+  section { background:#fff; border:1px solid var(--line); border-radius:18px;
+             padding:22px 24px; margin:16px 0; }
+  section h3 { margin:0 0 14px; font-size:16px; }
+  .muted { color:var(--muted); }
+  .small { font-size:12.5px; }
+  .track { height:8px; background:#eef2f7; border-radius:99px; overflow:hidden; margin:6px 0; }
+  .fill { height:100%; border-radius:99px; }
+  .region { margin-bottom:16px; }
+  .region-head { display:flex; align-items:center; gap:10px; }
+  .region-name { font-weight:600; }
+  .region-pct { margin-left:auto; font-weight:700; }
+  .pill { font-size:11px; padding:2px 9px; border-radius:99px; font-weight:600; }
+  .pill-ok { background:#e0f2fe; color:#0369a1; }
+  .pill-bad { background:#fee2e2; color:#b91c1c; }
+  .driver { margin-bottom:12px; }
+  .driver-row { display:flex; justify-content:space-between; font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  td.pos { color:#b45309; } td.neg { color:#1d4ed8; }
+  .narrative { font-size:15px; line-height:1.7; }
+  .rule { background:var(--bg); border:1px dashed var(--line); border-radius:12px;
+           padding:12px 14px; margin-top:12px; font-size:13px; color:var(--muted); }
+  .warn { background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:14px 16px; }
+  .warn ul { margin:8px 0 0; padding-left:18px; }
+  .disclaimer { font-size:12px; color:var(--muted); margin-top:24px; border-top:1px solid var(--line); padding-top:16px; }
+  @media print {
+    body { background:#fff; }
+    .topbar .btn { display:none; }
+    section, .card { box-shadow:none; }
+    .wrap { padding:0; max-width:100%; }
+  }
+</style></head>
+<body><div class="wrap">
+
+  <div class="topbar">
+    <div>
+      <h1>Clinical Kinematic Screening Report</h1>
+      <div class="sub">Source: tv2_keypoints.csv · Session TV2_KE-96441 · Generated Jun 28, 2026 · 21:37</div>
+    </div>
+    <button class="btn" onclick="window.print()">Save as PDF</button>
+  </div>
+
+  <div class="banner good">
+    <div>
+      <div class="tag">Diagnostic Classification</div>
+      <h2>Typical Motor Development</h2>
+    </div>
+    <div class="sev">
+      <div class="tag">Severity</div>
+      <div>Within typical range</div>
+    </div>
+  </div>
+
+  <div class="grid"><div class="card"><div class="card-label">Peak window risk</div><div class="card-value">23%</div></div><div class="card"><div class="card-label">Mean window risk</div><div class="card-value">19%</div></div><div class="card"><div class="card-label">Windows analyzed</div><div class="card-value">28</div></div><div class="card"><div class="card-label">Atypical windows</div><div class="card-value">0 / 28</div></div><div class="card"><div class="card-label">Consistency</div><div class="card-value">High</div></div></div>
+
+  <section>
+    <h3>Clinical Summary</h3>
+    <div class="narrative">No sustained atypical kinematics detected: 0 of 28 one-second windows crossed the 30% per-window risk threshold (flag requires &gt;= 2). The motor profile aligns with neurotypical development.</div>
+    <div class="rule">Not flagged: only 0 of 28 windows exceeded 30% (need &gt;= 2).</div>
+  </section>
+
+  <section>
+    <h3>Risk Timeline</h3>
+    
+    <svg viewBox="0 0 760 140" width="100%" preserveAspectRatio="none" role="img" aria-label="Risk timeline">
+      <polygon points="8,132.0 8.0,118.8 35.6,108.3 63.1,110.6 90.7,116.6 118.2,115.1 145.8,110.7 173.3,113.2 200.9,103.5 228.4,107.1 256.0,104.5 283.6,109.6 311.1,104.9 338.7,105.0 366.2,107.2 393.8,112.5 421.3,109.9 448.9,108.9 476.4,107.7 504.0,110.0 531.6,107.6 559.1,105.5 586.7,108.3 614.2,104.9 641.8,103.8 669.3,106.9 696.9,105.7 724.4,105.9 752.0,105.1 752.0,132.0" fill="#6366f1" fill-opacity="0.10"/>
+      <line x1="8" y1="94.8" x2="752" y2="94.8" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4 4"/>
+      <polyline points="8.0,118.8 35.6,108.3 63.1,110.6 90.7,116.6 118.2,115.1 145.8,110.7 173.3,113.2 200.9,103.5 228.4,107.1 256.0,104.5 283.6,109.6 311.1,104.9 338.7,105.0 366.2,107.2 393.8,112.5 421.3,109.9 448.9,108.9 476.4,107.7 504.0,110.0 531.6,107.6 559.1,105.5 586.7,108.3 614.2,104.9 641.8,103.8 669.3,106.9 696.9,105.7 724.4,105.9 752.0,105.1" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+    </svg>
+    <div class="muted small">Per-window atypical risk over the recording · dashed line = 30% per-window threshold</div>
+    
+  </section>
+
+  <section>
+    <h3>Regional Breakdown</h3>
+    
+        <div class="region">
+          <div class="region-head">
+            <span class="region-name">Upper Body</span>
+            <span class="pill pill-ok">Typical</span>
+            <span class="region-pct">39%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:39.2%;background:#3b82f6"></div></div>
+          <div class="muted small">Arm/shoulder kinematics - elbow &amp; shoulder angles, wrist excursion and inter-wrist distance. Sensitive to repetitive arm movements (stereotypies) and reduced/asymmetric arm swing.</div>
+        </div>
+        <div class="region">
+          <div class="region-head">
+            <span class="region-name">Lower Body</span>
+            <span class="pill pill-ok">Typical</span>
+            <span class="region-pct">58%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:57.6%;background:#3b82f6"></div></div>
+          <div class="muted small">Gait &amp; lower-limb kinematics - hip &amp; knee flexion, ankle base-of-support. Sensitive to atypical gait, toe-walking and posture.</div>
+        </div>
+        <div class="region">
+          <div class="region-head">
+            <span class="region-name">Symmetry</span>
+            <span class="pill pill-ok">Typical</span>
+            <span class="region-pct">3%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:3.2%;background:#3b82f6"></div></div>
+          <div class="muted small">Left-right coordination - Kendall&#x27;s-tau correlation between paired limbs. Sensitive to breakdowns in bilateral motor symmetry.</div>
+        </div>
+  </section>
+
+  <section>
+    <h3>Primary Kinematic Drivers</h3>
+    <div class="driver"><div class="driver-row"><span>Ankle-to-Ankle Distance - instantaneous</span><span class="muted">11%</span></div><div class="track"><div class="fill" style="width:11.2%;background:#6366f1"></div></div></div><div class="driver"><div class="driver-row"><span>Right Leg Angle - variability</span><span class="muted">10%</span></div><div class="track"><div class="fill" style="width:9.6%;background:#6366f1"></div></div></div><div class="driver"><div class="driver-row"><span>Left Arm Angle - peak velocity</span><span class="muted">8%</span></div><div class="track"><div class="fill" style="width:7.9%;background:#6366f1"></div></div></div><div class="driver"><div class="driver-row"><span>Left Leg Angle - peak acceleration</span><span class="muted">7%</span></div><div class="track"><div class="fill" style="width:7.4%;background:#6366f1"></div></div></div><div class="driver"><div class="driver-row"><span>Left Shoulder Posture - instantaneous</span><span class="muted">6%</span></div><div class="track"><div class="fill" style="width:6.0%;background:#6366f1"></div></div></div><div class="driver"><div class="driver-row"><span>Left Leg Angle - acceleration (jerk)</span><span class="muted">6%</span></div><div class="track"><div class="fill" style="width:5.9%;background:#6366f1"></div></div></div>
+  </section>
+
+  <section>
+    <h3>Kinematic Findings vs Typical Population</h3>
+    <table><thead><tr><th>Metric</th><th>Aspect</th><th>Region</th><th>Patient</th><th>Typical</th><th>Deviation</th></tr></thead><tbody><tr><td>Wrist-to-Wrist Distance</td><td>variability</td><td>Upper Body</td><td>0.03</td><td>0.24</td><td class='neg'>-1.8σ below typical</td></tr><tr><td>Wrist-to-Wrist Distance</td><td>movement speed</td><td>Upper Body</td><td>0.01</td><td>0.09</td><td class='neg'>-1.6σ below typical</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h3>Bilateral Symmetry</h3>
+    <table><thead><tr><th>Limb pair</th><th>Coordination</th><th>Typical</th><th>Status</th></tr></thead><tbody><tr><td>Arms</td><td>-0.05</td><td>0.24</td><td class=''>typical</td></tr><tr><td>Legs</td><td>0.63</td><td>0.38</td><td class=''>typical</td></tr><tr><td>Shoulders</td><td>0.35</td><td>-0.08</td><td class=''>typical</td></tr><tr><td>Hips</td><td>-0.07</td><td>-0.35</td><td class=''>typical</td></tr></tbody></table>
+  </section>
+
+  
+
+  <div class="disclaimer">
+    Analysis windows: 28 · Source kind: csv-coordinates
+     · OOD 0.7 (baseline 0.65)
+    <br/>This is an automated screening aid, NOT a diagnosis. Results quantify motor kinematics only and must be interpreted by a qualified clinician alongside history, observation and validated diagnostic instruments.
+  </div>
+
+</div></body></html>

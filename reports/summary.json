@@ -1,0 +1,18 @@
+{
+  "generated_at": "Jun 28, 2026 \u00b7 21:37",
+  "valid": [
+    {
+      "csv": "sora1_keypoints.csv",
+      "report": "sora1_keypoints_report.html",
+      "verdict": "atypical",
+      "peak_risk": 0.4036
+    },
+    {
+      "csv": "tv2_keypoints.csv",
+      "report": "tv2_keypoints_report.html",
+      "verdict": "typical",
+      "peak_risk": 0.23
+    }
+  ],
+  "omitted_wrong_format": []
+}
